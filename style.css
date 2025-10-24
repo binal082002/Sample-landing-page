@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  /* Hero Section with Animated Gradient Background */
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(270deg, #3b82f6, #6366f1, #06b6d4, #9333ea);
+    background-size: 800% 800%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: gradientMove 15s ease infinite;
+    overflow: hidden;
+  }
+  
+  @keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .hero-content {
+    text-align: center;
+    color: white;
+    z-index: 10;
+    animation: fadeIn 2s ease forwards;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s;
+  }
+  
+  .hero-content h1:hover {
+    transform: scale(1.05);
+  }
+  
+  .hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s;
+  }
+  
+  .hero-content p:hover {
+    transform: translateY(-5px);
+  }
+  
+  #cta-btn {
+    background: white;
+    color: #3b82f6;
+    font-weight: bold;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  #cta-btn:hover {
+    background: #e0e7ff;
+    transform: scale(1.05);
+  }
+  
+  .features-section {
+    padding: 4rem 2rem;
+    background: #f3f4f6;
+    text-align: center;
+  }
+  
+  .features-section h2 {
+    font-size: 3rem;
+    color: #111827;
+    margin-bottom: 0.5rem;
+  }
+  
+  .features-section .subheading {
+    font-size: 1.5rem;
+    color: #374151;
+    margin-bottom: 3rem;
+  }
+  
+  .features-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  }
+  
+  .card .icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #111827;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #4b5563;
+  }
+  
+  /* Secondary Button */
+  .secondary-btn {
+    background: #3b82f6;
+    color: white;
+    font-weight: bold;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .secondary-btn:hover {
+    background: #2563eb;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .features-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
